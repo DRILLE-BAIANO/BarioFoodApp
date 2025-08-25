@@ -1,0 +1,13 @@
+git config --global user.name DRILLE-BAIANO
+git config --global user.email duduzimhard@gmail.com
+
+npx create-expo-app@latest barioFoodApp
+
+cd barioFoodApp
+npm run reset-project      --> pressione 'n'
+
+criar uma pasta constants
+criar uma pasta Colors.ts na pasta constants
+
+criar uma pasta components
+criar um arquivo CustomHeader.tsx na pasta components -> rnfs
