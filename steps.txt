@@ -11,3 +11,8 @@ criar uma pasta Colors.ts na pasta constants
 
 criar uma pasta components
 criar um arquivo CustomHeader.tsx na pasta components -> rnfs
+
+npm i @gorhom/bottom-sheet
+npx expo install react-native-reanimated react-gesture-handler
+
+npx expo customize babel.config.js

@@ -4,6 +4,20 @@ import Colors from '@/constants/Colors';
 import { Link } from 'expo-router';
 import React from 'react'
 
+const SearchBar = () =>
+  <View style={styles.searchContainer}>
+    <View style={styles.seachField}>
+      <Ionicons style={styles.searchIcon} name='search' size={25} color={Colors.medium} />
+      <TextInput style={styles.input} placeholder='Restaurante, lanchonetes, pratos' />
+    </View>
+    <Link href={'/'} asChild>
+       <TouchableOpacity style={styles.optionButton}>
+        <Ionicons name='options-outline' size={25} color={Colors.primary} />
+       </TouchableOpacity>
+    </Link>
+    <SearchBar />
+  </View>
+
 export default function CustomHeader() {
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -17,7 +31,7 @@ export default function CustomHeader() {
             <Text style={styles.subtitle}>
               Barra Bonita - sp
             </Text>
-            <Ionicons name='chevron-dow' size={25} color={Colors.primary}/>
+            <Ionicons name='chevron-down' size={25} color={Colors.primary} />
           </TouchableOpacity>  
         </View>
         <TouchableOpacity style={styles.profileButton}>
@@ -69,5 +83,32 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.lghtGrey,
     padding: 10,
     borderRadius: 50
-  }
+  },
+  searchContainer: {
+    height: 60,
+    flexDirection: 'row',
+    gap: 10,
+    backgroundColor: '#fff',
+    paddingHorizontal: 20,
+    alignItems: 'center',
+  },
+  seachField: {
+    flex: 1,
+    backgroundColor: Colors.lghtGrey,
+    borderRadius: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+  } ,
+  input: {
+    padding: 10,
+    color: Colors.madiumDark,
+  } ,
+  searchIcon: {
+    paddingLeft: 10,
+
+  } ,
+  optionButton: {
+    padding: 10,
+    borderRadius: 50,
+  } ,
 })
